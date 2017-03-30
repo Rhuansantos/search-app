@@ -5,14 +5,13 @@ const babel = require('gulp-babel');
 
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['scss'], ['js'],  function() {
+gulp.task('serve', ['scss'],  function() {
 
     browserSync.init({
         server: "./"
     });
 
     gulp.watch("./scss/**", ['scss']);
-    gulp.watch("./js/**", ['js']);
     gulp.watch("/*.html").on('change', browserSync.reload);
 });
 
@@ -24,16 +23,6 @@ gulp.task('scss', function(){
   .pipe(browserSync.stream())
 
 })
-
-
-gulp.task('js', function(){
-
-	
-
-})
-
-
-
 
 
 

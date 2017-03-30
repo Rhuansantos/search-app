@@ -34,7 +34,7 @@ header {
       background: white;
       color: black; }
     header form select {
-      -webkit-appearance: none;
+      appearance: none;
       padding-left: 20px; }
     header form #breed {
       width: 300px; }
