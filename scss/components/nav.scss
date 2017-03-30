@@ -1,5 +1,63 @@
-nav{
-	width: 1920px;
-	height: 150px;
-	background: blue;
+header{
+
+	width: 100vw;
+	height: 100vh;
+	background: url("/img/header-background@1920x-100.jpg") center;
+
+	nav{
+	width: 100vw;
+	height: 100px;
+	// background: black;
+	// opacity: 0.1;
+
+		ul{
+			width: 80%;
+			margin: 0 auto;
+			li{
+				display: inline-block;
+				margin-left: 10%;
+				padding-top: 10px;
+				color: white;
+
+			}
+		}
+	}
+
+	#logo{
+		width: 230px;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+
+	form{
+		width: 960px;
+		margin: 0 auto;
+
+		input, select{
+			border-radius: 7px;
+			width: 210px;
+			height: 40px;
+			margin-left: 10px;
+			background: none;
+			color: white;
+			border: solid 1px white;
+
+		}
+		input[type='submit']{
+			width: 170px;
+			background: white;
+			color: black;
+		}
+		select{
+			-webkit-appearance: none;
+			padding-left: 20px;
+		}
+
+		#breed{
+			width: 300px;
+		}
+
+
+	}
 }

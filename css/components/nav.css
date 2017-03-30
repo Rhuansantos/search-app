@@ -1,4 +1,40 @@
-nav {
-  width: 1920px;
-  height: 150px;
-  background: blue; }
+header {
+  width: 100vw;
+  height: 100vh;
+  background: url("/img/header-background@1920x-100.jpg") center; }
+  header nav {
+    width: 100vw;
+    height: 100px; }
+    header nav ul {
+      width: 80%;
+      margin: 0 auto; }
+      header nav ul li {
+        display: inline-block;
+        margin-left: 10%;
+        padding-top: 10px;
+        color: white; }
+  header #logo {
+    width: 230px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px; }
+  header form {
+    width: 960px;
+    margin: 0 auto; }
+    header form input, header form select {
+      border-radius: 7px;
+      width: 210px;
+      height: 40px;
+      margin-left: 10px;
+      background: none;
+      color: white;
+      border: solid 1px white; }
+    header form input[type='submit'] {
+      width: 170px;
+      background: white;
+      color: black; }
+    header form select {
+      -webkit-appearance: none;
+      padding-left: 20px; }
+    header form #breed {
+      width: 300px; }
