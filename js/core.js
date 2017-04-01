@@ -33,7 +33,7 @@ class request{
 }
 
 
-class search extends request{
+export class search extends request{
 
 	constructor(_url, _location, _type, _breed){
 

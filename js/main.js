@@ -1,3 +1,5 @@
+import {search} from './core'
+
 
 const zipCode = document.querySelector('#location').value;
 
