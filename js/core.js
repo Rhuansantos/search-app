@@ -1,13 +1,15 @@
 class request{
 
-	constructor(_url, _method){
+	constructor(_url, _method, _template){
 		this.url = _url;
 		this.method = _method;
+		this.template = _template;
 	}
 
 	// making request
 	response(_params){
-		
+
+		var grabTemplate = this.template;
 
 		let requestReponse = null;
 		const xhttp = new XMLHttpRequest();
@@ -16,13 +18,12 @@ class request{
 
 		    if (this.readyState == 4 && this.status == 200) {
 
-		    	console.log(requestReponse);
-
 		     // creating object
 		     requestReponse = JSON.parse(this.responseText);
 
 		     // seding request for template
-		     search.template(requestReponse);
+		     let test = new search();
+		     test.printTemplate(requestReponse, grabTemplate);
 
 		    }
   		};
@@ -38,47 +39,37 @@ class request{
 
 export class search extends request{
 
-	constructor(_url, _method, _location){
+	constructor(_url, _method, _template, _params){
 
-		super(_url, _method);
-		this._location = _location;
+		super(_url, _method, _template);
+		this.params = _params;
 
 		// exec function
-		this.params();
-	
+	 	this.query(this.params);
+	 		
 	}
 
-  params(){
+  query(_params){
 
-  		let params = new FormData();
-		params.append("location", this._location);
-
-
-		this.response(params);
+		this.response(_params);
   }
 
 
   // print the cards template
-  static template(_response){
+  printTemplate(_response, _template){
 
-  	console.log(_response);
+  	console.log("response", this.template, "response2", _template);
   	//Container that the template will be printed
 	var section = document.querySelector('#pets');
 
 	// loop trought pets and printing their profiles
   	for(let i = 0; i < _response.data.length; i++){
 
-  		let petResponse = _response.data[i];
+  		let requestReponse = _response.data[i];
 
-  		let petListTemplate = `
-
-	  		<li>${petResponse.name}</li>
-	  		<li>${petResponse.age}</li>
-	  		<li>${petResponse.breed}</li>
-  		`;
 
 		// printing
-  		section.insertAdjacentHTML('beforeend', petListTemplate);
+  		section.insertAdjacentHTML('beforeend', _template);
 
   	}
 
