@@ -122,7 +122,7 @@ var main = function () {
 		value: function searchPet() {
 
 			var zipCode = document.querySelector('#location').value;
-			var adopets = new _core.search('http://api.beta.adopets.org/pet/find', zipCode);
+			var adopets = new _core.search('https://api.beta.adopets.org/pet/find', zipCode);
 		}
 	}]);
 
