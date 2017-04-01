@@ -11,6 +11,7 @@ gulp.task('scss', () => {
 
   return gulp.src('./scss/**')
   .pipe(sass().on('error', sass.logError))
+  .on('error', swallowError)
   .pipe(gulp.dest('./css'))
   .pipe(browserSync.stream())
 
@@ -24,6 +25,7 @@ gulp.task('es6', () => {
     })
     .bundle() 
     .pipe(source('main.js'))
+    .on('error', swallowError)
     .pipe(buffer())
     .pipe(gulp.dest('build'));
 });
@@ -37,13 +39,20 @@ gulp.task('serve', () => {
     });
 
     gulp.watch("./scss/**", ['scss']);
-    gulp.watch("js/main.js", ['es6']);
+    gulp.watch("./js/**", ['es6']);
     gulp.watch("/*.html").on('change', browserSync.reload);
 
 });
 
 
+function swallowError (error) {
+
+  console.log(error.toString())
+
+  this.emit('end')
+}
 
 gulp.task('default', ['serve'], () => {
 
 });
+

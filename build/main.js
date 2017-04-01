@@ -7,11 +7,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(["\n\t    <table>\n\t    ", "\n\t    </table>\n\t"], ["\n\t    <table>\n\t    ", "\n\t    </table>\n\t"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n\t        <tr>$", "</tr>\n\t    "], ["\n\t        <tr>$", "</tr>\n\t    "]);
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
@@ -25,6 +20,9 @@ var request = function () {
 		this.url = _url;
 	}
 
+	// making request
+
+
 	_createClass(request, [{
 		key: "response",
 		value: function response(_params) {
@@ -33,13 +31,14 @@ var request = function () {
 			var xhttp = new XMLHttpRequest();
 
 			xhttp.onreadystatechange = function () {
+
 				if (this.readyState == 4 && this.status == 200) {
 
+					// creating object
 					requestReponse = JSON.parse(this.responseText);
 
-					console.log(requestReponse);
-
-					search.template();
+					// seding request for template
+					search.template(requestReponse);
 				}
 			};
 
@@ -56,16 +55,14 @@ var request = function () {
 var search = exports.search = function (_request) {
 	_inherits(search, _request);
 
-	function search(_url, _location, _type, _breed) {
+	function search(_url, _location) {
 		_classCallCheck(this, search);
 
 		var _this = _possibleConstructorReturn(this, (search.__proto__ || Object.getPrototypeOf(search)).call(this, _url));
 
 		_this._location = _location;
-		// this._type = _type;
-		// this._breed = _breed;
 
-		// calling function
+		// exec function
 		_this.params();
 
 		return _this;
@@ -77,9 +74,6 @@ var search = exports.search = function (_request) {
 
 			var params = new FormData();
 			params.append("location", this._location);
-			// params.append("type", _type);
-			// params.append("breed", _breed);
-
 			this.response(params);
 		}
 
@@ -87,16 +81,21 @@ var search = exports.search = function (_request) {
 
 	}], [{
 		key: "template",
-		value: function template() {
-			var _this2 = this;
+		value: function template(_response) {
 
-			console.log("template");
+			//Container that the template will be printed
+			var section = document.querySelector('#pets');
 
-			var tmpl = function tmpl(addrs) {
-				return html(_templateObject, addrs.map(function (addr) {
-					return html(_templateObject2, _this2.location);
-				}));
-			};
+			// loop trought pets and printing their profiles
+			for (var i = 0; i < _response.data.length; i++) {
+
+				var petResponse = _response.data[i];
+
+				var petListTemplate = "\n\n\t  \t\t<li>" + petResponse.name + "</li>\n\t  \t\t<li>" + petResponse.age + "</li>\n\t  \t\t<li>" + petResponse.breed + "</li>\n  \t\t";
+
+				// printing
+				section.insertAdjacentHTML('beforeend', petListTemplate);
+			}
 		}
 	}]);
 
