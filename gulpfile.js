@@ -7,9 +7,6 @@ const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 
 
-
-
-
 gulp.task('scss', () => {
 
   return gulp.src('./scss/**')
@@ -48,7 +45,5 @@ gulp.task('serve', () => {
 
 
 gulp.task('default', ['serve'], () => {
-
-
 
 });

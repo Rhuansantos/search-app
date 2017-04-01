@@ -4,6 +4,7 @@ class request{
 		this.url = _url;
 	}
 
+	
 	response(_params){
 	
 		let requestReponse = null;
