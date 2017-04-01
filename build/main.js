@@ -1,5 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -14,17 +14,18 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var request = function () {
-	function request(_url) {
+	function request(_url, _method) {
 		_classCallCheck(this, request);
 
 		this.url = _url;
+		this.method = _method;
 	}
 
 	// making request
 
 
 	_createClass(request, [{
-		key: "response",
+		key: 'response',
 		value: function response(_params) {
 
 			var requestReponse = null;
@@ -34,6 +35,8 @@ var request = function () {
 
 				if (this.readyState == 4 && this.status == 200) {
 
+					console.log(requestReponse);
+
 					// creating object
 					requestReponse = JSON.parse(this.responseText);
 
@@ -42,7 +45,7 @@ var request = function () {
 				}
 			};
 
-			xhttp.open("POST", this.url, true);
+			xhttp.open(this.method, this.url, true);
 			xhttp.send(_params);
 
 			return requestReponse;
@@ -55,10 +58,10 @@ var request = function () {
 var search = exports.search = function (_request) {
 	_inherits(search, _request);
 
-	function search(_url, _location) {
+	function search(_url, _method, _location) {
 		_classCallCheck(this, search);
 
-		var _this = _possibleConstructorReturn(this, (search.__proto__ || Object.getPrototypeOf(search)).call(this, _url));
+		var _this = _possibleConstructorReturn(this, (search.__proto__ || Object.getPrototypeOf(search)).call(this, _url, _method));
 
 		_this._location = _location;
 
@@ -69,20 +72,22 @@ var search = exports.search = function (_request) {
 	}
 
 	_createClass(search, [{
-		key: "params",
+		key: 'params',
 		value: function params() {
 
 			var params = new FormData();
 			params.append("location", this._location);
+
 			this.response(params);
 		}
 
 		// print the cards template
 
 	}], [{
-		key: "template",
+		key: 'template',
 		value: function template(_response) {
 
+			console.log(_response);
 			//Container that the template will be printed
 			var section = document.querySelector('#pets');
 
@@ -91,7 +96,7 @@ var search = exports.search = function (_request) {
 
 				var petResponse = _response.data[i];
 
-				var petListTemplate = "\n\n\t  \t\t<li>" + petResponse.name + "</li>\n\t  \t\t<li>" + petResponse.age + "</li>\n\t  \t\t<li>" + petResponse.breed + "</li>\n  \t\t";
+				var petListTemplate = '\n\n\t  \t\t<li>' + petResponse.name + '</li>\n\t  \t\t<li>' + petResponse.age + '</li>\n\t  \t\t<li>' + petResponse.breed + '</li>\n  \t\t';
 
 				// printing
 				section.insertAdjacentHTML('beforeend', petListTemplate);
@@ -119,15 +124,25 @@ var main = function () {
 	_createClass(main, null, [{
 		key: 'searchPet',
 		value: function searchPet() {
-
+			console.log('ok');
 			var zipCode = document.querySelector('#location').value;
-			var adopets = new _core.search('https://api.beta.adopets.org/pet/find', zipCode);
+			var adopets = new _core.search('https://api.beta.adopets.org/pet/find', "POST", zipCode);
+		}
+	}, {
+		key: 'searchMusic',
+		value: function searchMusic() {
+			console.log('ok');
+			var spotify = new _core.search('https://api.spotify.com/v1/search?q=projota&type=artist', "GET");
 		}
 	}]);
 
 	return main;
 }();
 
-main.searchPet();
+document.getElementById('submitSearch').addEventListener('click', function (event) {
+
+	event.preventDefault();
+	main.searchPet();
+});
 
 },{"./core":1}]},{},[2]);
