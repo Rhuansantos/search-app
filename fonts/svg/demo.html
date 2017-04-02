@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Untitled font 3 SVG Sprite</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style type="text/css">
+  html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-family:inherit;font-size:100%;vertical-align:baseline}
+  body{line-height:1;color:#000;background:#fff}
+  ol,ul{list-style:none}
+  table{border-collapse:separate;border-spacing:0;vertical-align:middle}
+  caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
+  a img{border:none}
+  *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+  body{font-family:'Dosis','Tahoma',sans-serif}
+  .container{margin:15px auto;width:80%}
+  h1{margin:40px 0 20px;font-weight:700;font-size:38px;line-height:32px;color:#fb565e}
+  h2{font-size:18px;padding:0 0 21px 5px;margin:45px 0 0 0;text-transform:uppercase;font-weight:500; color: #fb565e;}
+  p {margin: 10px 0 ; line-height:1.3em; color: #454545;}
+  .small{font-size:14px;color:#a5adb4;}
+  .small a{color:#a5adb4;}
+  .small a:hover{color:#fb565e}
+  .glyphs{margin:0 0 60px 0;padding:30px 0 20px 30px;color:rgba(0,0,0,0.8);border:1px solid #d8e0e5;-webkit-border-radius:3px;border-radius:3px;}
+  .glyphs li{margin:0 30px 20px 0;padding:0;display:inline-block;overflow:hidden}
+  .glyphs input{margin:0;margin-top:5px;padding:8px;line-height:16px;font-size:16px;display:block;width:150px;height:40px;border:1px solid #d8e0e5;-webkit-border-radius:5px;border-radius:5px;background:#fff;outline:0;float:right;}
+  .glyphs input:focus{border:1px solid #fbde4a;-webkit-box-shadow:inset 0 0 3px #fbde4a;box-shadow:inset 0 0 3px #fbde4a}
+  .glyphs input:hover{-webkit-box-shadow:inset 0 0 3px #fbde4a;box-shadow:inset 0 0 3px #fbde4a}
+
+  /*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  color: #333;
+  background: #f8f8f8
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #998;
+  font-style: italic
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #d14
+}
+
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold
+}
+
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080
+}
+
+.hljs-regexp {
+  color: #009926
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073
+}
+
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold
+}
+
+.hljs-deletion {
+  background: #fdd
+}
+
+.hljs-addition {
+  background: #dfd
+}
+
+.diff .hljs-change {
+  background: #0086b3
+}
+
+.hljs-chunk {
+  color: #aaa
+}
+
+
+  .tip {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+  .tip > .number {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 16px;
+    margin-right: 12px;
+    padding: 3px 7px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background-color: #fb565e;
+    color: #fff;
+    text-align: center;
+  }
+  code {
+    background: #faf9ff;
+    border: 1px solid #bab9c0;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 4px;
+    font-size: 14px;
+  }
+  pre code {
+    display: block;
+    padding: 4px 6px;
+  }
+
+  [class^="icon-"],
+  [class*=" icon-"] {
+    margin: 10px;
+    height: 32px;
+    width: 32px;
+    float: left;
+    fill: currentColor;
+  }
+  </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  
+    <symbol id="icon-add" viewBox="0 0 512 512">
+      <path d="m507 256c0 16-13 29-29 29l-193 0 0 193c0 16-13 29-29 29-16 0-29-13-29-29l0-193-193 0c-16 0-29-13-29-29 0-16 13-29 29-29l193 0 0-193c0-16 13-29 29-29 16 0 29 13 29 29l0 193 193 0c16 0 29 13 29 29z"/>
+    </symbol>
+  
+    <symbol id="icon-settings" viewBox="0 0 512 512">
+      <path d="m466 251c0 118-96 214-214 214-118 0-213-96-213-214 0-118 95-213 213-213 118 0 214 95 214 213z m-96-21l-31 0c-2-9-5-17-10-25l22-22c6-7 6-17 0-23l-8-8c-6-6-16-6-22 0l-22 23c-8-5-16-9-25-11l0-31c0-9-7-16-16-16l-11 0c-4 0-9 2-12 5-3 3-4 7-4 11l0 31c-9 2-17 6-25 11l-22-23c-7-6-17-6-23 0l-8 8c-6 6-6 17 0 23l22 22c-4 7-8 16-10 25l-31 0c-4 0-8 1-11 4-4 3-5 7-5 12l0 11c0 8 7 16 16 16l31 0c2 8 6 17 11 24l-23 23c-6 6-6 16 0 22l8 8c6 6 16 6 23 0l22-22c8 4 16 8 25 10l0 31c0 5 1 9 4 12 3 3 8 5 12 5l11 0c8 0 16-8 16-17l0-31c9-2 17-5 25-10l22 22c6 6 16 6 22 0l8-8c6-6 6-16 0-22l-22-23c5-7 8-16 10-24l31 0c9 0 17-8 17-17l0-10c0-4-2-8-5-11-3-4-7-5-12-5z m-118 64c-24 0-43-19-43-43 0-23 19-43 43-43 24 0 43 20 43 43 0 24-19 43-43 43z"/>
+    </symbol>
+  
+    <symbol id="icon-check-circle" viewBox="0 0 512 512">
+      <path d="m403 210c0-6-1-10-5-13l-26-26c-3-4-8-6-13-6-5 0-9 2-12 6l-117 116-65-64c-3-4-7-6-12-6-5 0-10 2-13 6l-26 25c-4 4-5 8-5 13 0 6 1 10 5 13l103 104c4 3 8 5 13 5 5 0 10-2 13-5l155-155c4-4 5-8 5-13z m72 46c0 40-9 77-29 110-20 34-46 60-80 80-33 20-70 29-110 29-40 0-77-9-110-29-34-20-60-46-80-80-20-33-29-70-29-110 0-40 9-77 29-110 20-34 46-60 80-80 33-20 70-29 110-29 40 0 77 9 110 29 34 20 60 46 80 80 20 33 29 70 29 110z"/>
+    </symbol>
+  
+    <symbol id="icon-linkedin" viewBox="0 0 512 512">
+      <path d="m136 179l0 283-94 0 0-283z m6-88c0 14-4 26-14 35-10 9-23 14-39 14l0 0c-16 0-29-5-38-14-10-9-14-21-14-35 0-14 4-26 14-35 10-9 23-14 39-14 16 0 28 5 38 14 9 9 14 21 14 35z m333 208l0 163-94 0 0-152c0-20-3-35-11-47-8-11-20-17-36-17-12 0-22 4-30 10-9 7-15 15-19 25-2 5-3 13-3 23l0 158-94 0c1-76 1-138 1-185 0-47 0-76 0-85l-1-13 94 0 0 41 0 0c4-6 7-12 11-16 4-5 10-10 17-15 6-5 15-10 24-13 10-3 21-4 33-4 33 0 59 11 79 32 20 22 29 54 29 95z"/>
+    </symbol>
+  
+    <symbol id="icon-linkedin-square" viewBox="0 0 512 512">
+      <path d="m104 404l66 0 0-198-66 0z m71-259c-1-10-4-19-11-25-6-6-15-10-26-10-11 0-20 4-27 10-7 6-11 15-11 25 0 9 4 17 10 24 7 7 16 10 27 10l0 0c11 0 20-3 27-10 7-7 11-15 11-24z m167 259l66 0 0-114c0-29-7-51-21-66-14-15-32-23-55-23-26 0-46 11-60 34l1 0 0-29-66 0c0 12 0 78 0 198l66 0 0-111c0-7 0-12 2-16 2-7 7-12 12-17 6-5 13-7 22-7 22 0 33 15 33 45z m133-285l0 274c0 23-8 42-24 58-16 16-35 24-58 24l-274 0c-23 0-42-8-58-24-16-16-24-35-24-58l0-274c0-23 8-42 24-58 16-16 35-24 58-24l274 0c23 0 42 8 58 24 16 16 24 35 24 58z"/>
+    </symbol>
+  
+    <symbol id="icon-youtube-square" viewBox="0 0 512 512">
+      <path d="m299 372l0-45c0-9-3-14-8-14-3 0-7 2-10 5l0 64c3 3 7 4 10 4 5 0 8-4 8-14z m53-35l19 0 0-9c0-10-4-15-10-15-6 0-9 5-9 15z m-163-76l0 20-23 0 0 121-21 0 0-121-23 0 0-20z m57 36l0 105-19 0 0-11c-8 8-15 13-22 13-6 0-10-3-12-8-1-3-2-8-2-16l0-83 19 0 0 78c0 4 0 7 1 7 0 3 1 4 4 4 4 0 8-3 12-9l0-80z m72 32l0 42c0 10-1 17-2 21-2 8-7 12-15 12-7 0-13-4-20-12l0 10-19 0 0-141 19 0 0 46c7-7 13-11 20-11 8 0 13 4 15 12 1 4 2 11 2 21z m72 37l0 3c0 5 0 9-1 12 0 4-2 8-4 11-5 8-13 12-23 12-10 0-18-4-23-11-4-5-6-13-6-25l0-37c0-11 2-19 6-24 5-7 13-11 22-11 10 0 18 4 23 11 4 5 6 13 6 24l0 22-38 0 0 19c0 9 3 14 9 14 5 0 8-2 9-7 0 0 0-1 0-2 0-1 0-3 0-5l0-6z m-129-235l0 44c0 10-3 15-9 15-6 0-9-5-9-15l0-44c0-10 3-15 9-15 6 0 9 5 9 15z m152 203c0-33-2-58-5-74-2-8-6-15-13-21-6-6-13-9-21-10-26-3-65-4-118-4-52 0-92 1-117 4-9 1-16 4-22 10-6 6-11 13-12 21-4 17-6 41-6 74 0 34 2 59 6 75 1 8 6 15 12 20 6 6 13 9 21 10 26 3 66 5 118 5 52 0 92-2 118-5 8-1 15-4 21-10 6-5 11-12 12-20 4-16 6-41 6-75z m-216-186l26-84-21 0-15 55-15-55-22 0 7 19 6 20c7 20 11 35 13 45l0 58 21 0z m83 23l0-37c0-11-2-19-6-25-6-7-13-10-22-10-10 0-17 3-23 10-4 6-6 14-6 25l0 37c0 11 2 20 6 25 6 8 13 11 23 11 9 0 16-3 22-11 4-5 6-13 6-25z m52 35l19 0 0-106-19 0 0 81c-4 6-8 9-12 9-3 0-5-2-5-5 0 0 0-3 0-7l0-78-19 0 0 84c0 7 0 12 1 15 3 6 7 8 13 8 7 0 14-4 22-13z m143-87l0 274c0 23-8 42-24 58-16 16-35 24-58 24l-274 0c-23 0-42-8-58-24-16-16-24-35-24-58l0-274c0-23 8-42 24-58 16-16 35-24 58-24l274 0c23 0 42 8 58 24 16 16 24 35 24 58z"/>
+    </symbol>
+  
+    <symbol id="icon-youtube" viewBox="0 0 512 512">
+      <path d="m314 355l0 61c0 12-4 19-11 19-5 0-9-2-13-6l0-86c4-5 8-7 13-7 7 0 11 7 11 19z m97 1l0 13-26 0 0-13c0-13 4-20 13-20 8 0 13 7 13 20z m-276-63l30 0 0-26-89 0 0 26 30 0 0 163 29 0z m82 163l25 0 0-141-25 0 0 108c-6 8-11 12-16 12-4 0-6-2-6-6-1-1-1-4-1-10l0-104-25 0 0 112c0 9 1 16 2 20 2 7 8 11 17 11 9 0 19-6 29-17z m122-42l0-57c0-13 0-23-2-28-3-11-10-16-20-16-10 0-19 5-27 16l0-62-25 0 0 189 25 0 0-14c9 11 17 16 27 16 10 0 17-5 20-16 2-5 2-14 2-28z m97-3l0-4-26 0c0 10 0 16-1 18-1 6-5 10-11 10-9 0-13-7-13-20l0-25 51 0 0-29c0-15-3-26-8-33-7-10-17-15-30-15-13 0-23 5-31 15-5 7-8 18-8 33l0 49c0 15 3 26 9 33 7 10 17 15 31 15 13 0 24-5 30-15 4-5 6-10 6-16 1-1 1-7 1-16z m-174-261l0-60c0-13-4-20-12-20-8 0-12 7-12 20l0 60c0 13 4 20 12 20 8 0 12-7 12-20z m206 215c0 44-3 77-8 100-2 11-8 20-16 28-9 7-18 12-29 13-35 4-88 6-159 6-71 0-124-2-159-6-11-1-20-6-29-13-8-8-14-17-16-28-5-22-8-55-8-100 0-45 3-78 8-100 2-12 8-21 16-29 9-7 18-12 30-13 35-4 87-6 158-6 71 0 124 2 159 6 11 1 20 6 29 13 8 8 14 17 16 29 5 21 8 54 8 100z m-285-365l29 0-35 114 0 77-28 0 0-77c-3-14-9-34-18-61-7-19-13-37-18-53l30 0 20 75z m105 95l0 50c0 16-2 27-8 34-7 10-17 14-30 14-13 0-23-4-30-14-5-7-8-19-8-34l0-50c0-15 3-26 8-33 7-10 17-15 30-15 13 0 23 5 30 15 6 7 8 18 8 33z m96-46l0 142-26 0 0-15c-10 12-20 17-29 17-9 0-15-3-17-10-2-5-3-12-3-22l0-112 26 0 0 105c0 6 1 9 1 10 0 4 2 6 6 6 5 0 10-4 16-12l0-109z"/>
+    </symbol>
+  
+    <symbol id="icon-tag" viewBox="0 0 512 512">
+      <path d="m165 128c0-10-4-19-11-26-7-7-16-11-26-11-10 0-19 4-26 11-7 7-11 16-11 26 0 10 4 19 11 26 7 7 16 11 26 11 10 0 19-4 26-11 7-7 11-16 11-26z m304 165c0 10-3 18-10 25l-140 141c-8 7-17 10-26 10-11 0-19-3-26-10l-204-205c-8-7-14-16-19-29-5-12-7-23-7-33l0-119c0-10 3-18 10-26 8-7 16-10 26-10l119 0c10 0 21 2 33 7 13 5 22 11 30 19l204 204c7 7 10 16 10 26z"/>
+    </symbol>
+  
+    <symbol id="icon-tags" viewBox="0 0 512 512">
+      <path d="m110 128c0-10-4-19-11-26-7-7-16-11-26-11-10 0-19 4-26 11-7 7-10 16-10 26 0 10 3 19 10 26 7 7 16 11 26 11 10 0 19-4 26-11 7-7 11-16 11-26z m305 165c0 10-4 18-11 25l-140 141c-8 7-16 10-26 10-10 0-19-3-26-10l-204-205c-8-7-14-16-19-29-5-12-7-23-7-33l0-119c0-10 3-18 11-26 7-7 15-10 25-10l119 0c10 0 21 2 34 7 12 5 21 11 29 19l204 204c7 7 11 16 11 26z m109 0c0 10-3 18-10 25l-141 141c-7 7-16 10-26 10-6 0-12-1-16-4-5-2-10-7-16-12l135-135c7-7 10-15 10-25 0-10-3-19-10-26l-205-204c-7-8-17-14-29-19-12-5-23-7-33-7l64 0c10 0 21 2 33 7 12 5 22 11 29 19l205 204c7 7 10 16 10 26z"/>
+    </symbol>
+  
+    <symbol id="icon-facebook" viewBox="0 0 512 512">
+      <path d="m384 3l0 76-45 0c-17 0-28 3-33 10-6 7-9 17-9 31l0 54 84 0-11 85-73 0 0 216-87 0 0-216-73 0 0-85 73 0 0-62c0-36 10-63 29-83 20-19 47-29 80-29 28 0 49 1 65 3z"/>
+    </symbol>
+  
+    <symbol id="icon-facebook-square" viewBox="0 0 512 512">
+      <path d="m393 37c23 0 42 8 58 24 16 16 24 35 24 58l0 274c0 23-8 42-24 58-16 16-35 24-58 24l-54 0 0-170 57 0 9-66-66 0 0-42c0-11 3-19 7-24 5-5 13-8 26-8l35 0 0-60c-12-1-29-2-51-2-26 0-46 7-62 23-15 15-23 36-23 64l0 49-57 0 0 66 57 0 0 170-152 0c-23 0-42-8-58-24-16-16-24-35-24-58l0-274c0-23 8-42 24-58 16-16 35-24 58-24z"/>
+    </symbol>
+  
+    <symbol id="icon-heart-empty" viewBox="0 0 512 512">
+      <path d="m440 106c24 22 36 49 36 80c0 32-12 58-36 80c0 0-184 169-184 169c0 0-184-169-184-169c-24-22-36-48-36-80c0-31 12-58 36-80c22-19 47-29 78-29c30 0 55 10 76 29c0 0 30 27 30 27c0 0 29-27 29-27c22-19 47-29 77-29c31 0 56 10 78 29m-27 134c14-14 21-32 21-54c0-22-6-39-19-51c-13-13-31-19-53-19c-17 0-35 8-53 24c0 0-53 47-53 47c0 0-54-47-54-47c-17-16-34-24-52-24c-22 0-40 6-54 19c-13 12-19 30-19 51c0 23 7 41 22 54c0 0 157 146 157 146c0 0 157-146 157-146"/>
+    </symbol>
+  
+    <symbol id="icon-exclamation-circle" viewBox="0 0 512 512">
+      <path d="m256 37c40 0 77 9 110 29 34 20 60 46 80 80 20 33 29 70 29 110 0 40-9 77-29 110-20 34-46 60-80 80-33 20-70 29-110 29-40 0-77-9-110-29-34-20-60-46-80-80-20-33-29-70-29-110 0-40 9-77 29-110 20-34 46-60 80-80 33-20 70-29 110-29z m37 356l0-54c0-3-1-5-3-7-2-2-4-3-6-3l-55 0c-3 0-5 1-7 3-2 2-3 4-3 7l0 54c0 2 1 5 3 6 2 2 4 3 7 3l55 0c2 0 4-1 6-2 2-2 3-4 3-7z m-1-98l5-178c0-2-1-4-3-5-2-2-4-2-7-2l-62 0c-3 0-5 0-7 2-2 1-3 3-3 5l5 178c0 1 1 3 3 5 1 1 4 2 6 2l53 0c3 0 5-1 7-2 2-2 3-4 3-5z"/>
+    </symbol>
+  
+    <symbol id="icon-search" viewBox="0 0 512 512">
+      <path d="m450 395c10 12 11 22 3 32c0 0-24 24-24 24c-12 10-24 10-35 0c0 0-97-98-97-98c-25 15-52 22-80 22c-44 0-82-16-114-49c-33-32-49-70-49-114c0-44 16-81 46-112c31-31 68-47 112-47c44 0 82 16 115 49c32 32 49 70 49 114c0 30-8 58-24 83c0 0 98 96 98 96m-348-183c0 30 12 57 35 80c23 23 50 35 80 35c30 0 56-11 77-33c22-21 33-47 33-78c0-30-12-56-35-79c-23-23-50-35-80-35c-30 0-56 11-77 33c-22 21-33 47-33 77"/>
+    </symbol>
+  
+    <symbol id="icon-notification" viewBox="0 0 512 512">
+      <path d="m234 50l0 0c101 0 183 82 183 183l0 0c0 101-82 183-183 183l0 0c-101 0-182-82-182-183l0 0c0-101 81-183 182-183z m71 97l-141 0c-5 0-10 1-13 5-3 3-5 8-5 12l0 152c0 9 1 14 2 14 1 1 2-4 3-12l30-30c0-1 0-1 1 0l123 0c10 0 17-8 17-18l0-106c0-9-7-17-17-17z m-73 96l4 0c4 0 7 3 7 6l0 5c0 4-3 7-7 7l-4 0c-4 0-7-3-7-7l0-5c0-3 3-6 7-6z m-1-71l7 0c3 0 5 2 5 5l0 42c0 3-2 6-5 6l-7 0c-3 0-6-3-6-6l0-42c0-3 3-5 6-5z m0 73l6 0c2 0 4 2 4 4l0 6c0 2-2 3-4 3l-6 0c-2 0-3-1-3-3l0-6c0-2 1-4 3-4z m1-71l4 0c2 0 4 1 4 3l0 42c0 2-2 4-4 4l-4 0c-2 0-3-2-3-4l0-42c0-2 1-3 3-3z"/>
+    </symbol>
+  
+    <symbol id="icon-usd" viewBox="0 0 512 512">
+      <path d="m389 339c0 29-9 54-28 75-19 21-44 34-74 39l0 50c0 3-1 5-3 6-1 2-4 3-6 3l-39 0c-2 0-4-1-6-3-2-2-3-4-3-6l0-50c-13-2-25-5-36-9-12-4-22-8-29-13-8-4-15-9-22-13-6-5-10-9-13-11-2-2-4-4-5-5-3-4-3-8 0-12l29-39c1-1 4-3 7-3 2 0 5 0 6 3l1 0c22 19 45 31 69 36 7 1 15 2 22 2 15 0 29-4 40-12 12-8 18-20 18-35 0-5-2-10-4-15-3-5-6-9-10-12-4-3-9-7-17-11-7-4-14-7-19-9-5-2-12-5-22-9-8-3-14-6-18-7-4-2-10-5-18-8-7-3-13-6-17-9-5-2-10-6-17-10-6-4-11-8-15-12-4-4-8-9-12-14-5-6-8-11-10-17-3-5-5-12-6-19-2-7-3-14-3-22 0-26 9-49 28-69 19-20 43-33 73-38l0-52c0-2 1-4 3-6 2-2 4-3 6-3l39 0c2 0 5 1 6 3 2 1 3 3 3 6l0 50c11 2 21 4 31 7 11 3 19 6 25 10 7 3 13 6 18 10 6 4 10 7 12 9 1 1 3 2 4 4 3 3 4 7 1 10l-23 42c-1 3-4 5-6 5-3 0-6 0-8-2-1-1-2-2-4-4-2-1-6-4-11-7-6-4-11-7-17-9-6-3-13-6-21-8-9-2-17-3-25-3-18 0-33 4-44 12-12 8-17 19-17 32 0 5 1 9 2 14 2 4 5 8 9 11 4 4 7 7 11 10 3 2 9 5 16 9 7 3 13 6 17 7 5 2 11 5 20 8 10 4 18 7 23 9 6 2 13 6 22 10 9 5 16 9 22 12 5 4 11 9 17 15 7 6 12 12 15 18 4 6 7 13 9 22 3 8 4 17 4 27z"/>
+    </symbol>
+  
+    <symbol id="icon-twitter" viewBox="0 0 512 512">
+      <path d="m370 371l-114 0c-16 0-29-5-40-16c-11-12-17-25-17-41l0-40l162 0c15 0 28-6 38-16c11-11 16-23 16-38c0-14-5-27-16-37c-10-11-23-16-38-16l-162 0l0-84c0-16-5-29-16-40c-12-12-25-17-41-17c-16 0-30 5-41 16c-11 11-17 25-17 41l0 231c0 48 17 88 51 122c33 34 74 50 121 50l114 0c16 0 29-5 41-17c11-11 17-24 17-40c0-16-6-30-17-41c-12-11-25-17-41-17z"/>
+    </symbol>
+  
+    <symbol id="icon-twitter-alt" viewBox="0 0 512 512">
+      <path d="m434 238c26-2 44-13 50-29c-9 5-38 12-54 6c-1-4-2-8-2-11c-13-45-54-81-98-76c3-2 7-3 11-4c4-2 33-7 28-17c-4-8-38 7-45 9c9-3 23-9 25-19c-13 2-26 8-36 17c3-4 6-8 7-13c-35 22-56 67-73 111c-13-13-24-23-34-28c-29-16-64-32-119-52c-1 18 9 42 40 58c-7-1-19 1-29 3c4 21 17 38 52 46c-16 1-24 5-32 13c8 14 25 31 57 27c-35 16-14 44 15 40c-50 50-127 47-171 4c116 158 368 94 405-59c29 1 45-9 55-20c-16 2-39 0-52-6z"/>
+    </symbol>
+  
+    <symbol id="icon-heart-1" viewBox="0 0 512 512">
+      <path d="m256 475c-5 0-9-1-13-5l-178-172c-2-1-4-4-8-7-3-4-8-10-16-19-7-9-13-18-19-28-6-9-11-21-15-34-5-14-7-27-7-40 0-42 12-74 36-98 24-24 58-35 101-35 11 0 23 2 36 6 12 4 23 9 34 16 11 7 20 14 27 20 8 6 15 12 22 19 7-7 14-13 22-19 7-6 16-13 27-20 11-7 22-12 34-16 13-4 25-6 36-6 43 0 77 11 101 35 24 24 36 56 36 98 0 42-22 85-65 129l-178 171c-4 4-8 5-13 5z"/>
+    </symbol>
+  
+    <symbol id="icon-help-circled" viewBox="0 0 512 512">
+      <path d="m253 20c65 0 120 22 167 67c46 45 70 100 72 165c0 65-22 121-68 167c-45 47-100 71-165 73c-65 0-121-22-167-68c-47-45-71-100-72-165c-1-65 21-121 67-167c46-47 101-71 166-72m-1 379c10 0 19-3 25-9c6-7 10-15 10-24c0-11-2-19-9-26c-6-6-15-9-25-9c0 0-1 0-1 0c-10 0-18 3-24 9c-7 6-10 14-11 24c0 10 3 18 10 25c6 6 14 10 24 10c0 0 1 0 1 0m85-168c9-11 13-24 13-40c0-26-9-46-27-59c-18-13-41-19-69-19c-22 0-40 4-53 13c-24 14-36 39-37 75c0 0 0 2 0 2c0 0 56 0 56 0c0 0 0-2 0-2c0-9 3-18 8-28c6-8 15-12 28-12c14 0 23 3 27 10c5 7 8 14 8 23c0 6-3 13-8 20c-3 4-7 8-11 10c0 0-3 2-3 2c-2 2-4 4-8 6c-3 2-7 5-10 8c-4 2-7 5-11 8c-4 3-7 6-9 9c-4 7-7 20-9 40c0 0 0 4 0 4c0 0 56 0 56 0c0 0 0-2 0-2c0-4 0-9 2-14c2-7 6-13 14-19c0 0 14-9 14-9c16-12 25-20 29-26"/>
+    </symbol>
+  
+    <symbol id="icon-tag-1" viewBox="0 0 512 512">
+      <path d="m493 10c13 36 11 70-4 102c-15 32-37 59-65 81c0 0 9 12 9 12c5 9 6 19 3 27c0 0-25 81-25 81c-4 11-10 18-18 24c0 0-238 168-238 168c-14 10-25 9-32-2c0 0-108-156-108-156c-4-6-6-13-5-20c2-7 5-13 11-17c0 0 238-168 238-168c9-6 18-9 27-9c0 0 81 0 81 0c11 0 19 5 25 13c0 0 14 21 14 21c58-44 77-93 59-147c-4-9-1-16 9-20c11-3 17 1 19 10m-110 240c13-11 19-25 17-41c0 0-16 8-16 8c-3 1-5 2-6 2c-7 0-11-3-15-9c-4-10-1-17 8-21c0 0 13-7 13-7c-17-11-32-11-47 0c-10 6-16 15-18 26c-2 12 1 22 7 32c7 8 15 14 27 16c11 2 21 0 30-6"/>
+    </symbol>
+  
+    <symbol id="icon-basket" viewBox="0 0 512 512">
+      <path d="m102 435c0-13 6-25 16-36c10-10 22-15 36-15c14 0 26 5 36 15c10 11 15 23 15 36c0 15-5 27-15 37c-10 9-22 14-36 14c-14 0-26-5-36-14c-10-10-16-22-16-37m256 0c0-13 6-25 16-36c10-10 22-15 36-15c14 0 26 5 36 15c10 11 15 23 15 36c0 15-5 27-15 37c-10 9-22 14-36 14c-14 0-26-5-36-14c-10-10-16-22-16-37m-164-121c-13 4-19 8-18 12c1 5 8 7 23 7c0 0 287 0 287 0c0 0 0 39 0 39c0 7-3 10-10 10c0 0-66 0-66 0c0 0-256 0-256 0c0 0-13 0-13 0c-7 0-10-3-10-10c0 0 0-39 0-39c0 0-5-24-5-24c0 0-50-232-50-232c0 0-50 0-50 0c0 0 0-41 0-41c0-7 3-10 10-10c0 0 80 0 80 0c7 0 10 3 10 10c0 0 0 44 0 44c0 0 360 0 360 0c0 0 0 140 0 140c0 8-3 12-9 13c0 0-283 81-283 81"/>
+    </symbol>
+  
+    <symbol id="icon-camera" viewBox="0 0 512 512">
+      <path d="m256 205c22 0 40 7 55 22c14 15 22 33 22 55c0 21-8 39-23 54c-15 15-33 22-54 22c-21 0-39-7-54-22c-15-15-23-33-23-54c0-22 8-40 23-55c15-15 33-22 54-22m205-77c14 0 26 5 36 15c10 10 15 22 15 36c0 0 0 231 0 231c0 13-5 25-15 35c-10 11-22 16-36 16c0 0-410 0-410 0c-13 0-25-5-36-16c-10-10-15-22-15-35c0 0 0-231 0-231c0-14 5-26 15-36c11-10 23-15 36-15c0 0 62 0 62 0c9 0 16-5 20-15c0 0 15-47 15-47c4-10 11-15 21-15c0 0 174 0 174 0c10 0 17 5 21 15c0 0 15 47 15 47c4 10 11 15 20 15c0 0 62 0 62 0m-205 282c36 0 66-13 91-38c25-25 37-55 37-90c0-36-12-66-37-91c-25-25-55-37-91-37c-35 0-66 12-91 37c-25 25-37 55-37 91c0 35 12 65 37 90c25 25 56 38 91 38m187-195c5 0 9-2 13-6c3-3 5-8 5-12c0-5-2-9-5-13c-4-3-8-5-13-5c-12 0-18 6-18 18c0 5 2 10 6 13c3 3 8 5 12 5"/>
+    </symbol>
+  
+    <symbol id="icon-picture" viewBox="0 0 512 512">
+      <path d="m438 170c0 0-51 0-51 0c0 0-63-77-63-77c0 0-110 77-110 77c0 0-92 0-92 0c-18 0-33 7-46 20c-13 13-19 29-19 47c0 0 0 81 0 81c0 0-56-151-56-151c-3-13 1-22 11-27c0 0 349-127 349-127c12-3 20 1 25 13c0 0 52 144 52 144m55 46c5 0 10 2 14 6c3 4 5 9 5 15c0 0 0 241 0 241c0 6-2 10-5 15c-4 4-9 6-14 6c0 0-371 0-371 0c-5 0-10-2-14-6c-4-5-5-9-5-15c0 0 0-241 0-241c0-6 1-11 5-15c4-4 9-6 14-6c0 0 371 0 371 0m-29 231c0 0 0-82 0-82c0 0-37-82-37-82c0 0-85 30-85 30c0 0-66 68-66 68c0 0-71-87-71-87c0 0-47 109-47 109c0 0 0 44 0 44c0 0 306 0 306 0"/>
+    </symbol>
+  
+    <symbol id="icon-calendar" viewBox="0 0 512 512">
+      <path d="m435 77c15 0 27 5 37 15c9 10 14 22 14 36c0 0 0 307 0 307c0 14-5 26-14 36c-10 10-22 15-37 15c0 0-358 0-358 0c-14 0-26-5-36-15c-10-10-15-22-15-36c0 0 0-307 0-307c0-14 5-26 15-36c10-10 22-15 36-15c0 0 23 0 23 0c0 0 0 51 0 51c0 0 82 0 82 0c0 0 0-51 0-51c0 0 149 0 149 0c0 0 0 51 0 51c0 0 82 0 82 0c0 0 0-51 0-51c0 0 22 0 22 0m0 358c0 0 0-205 0-205c0 0-358 0-358 0c0 0 0 205 0 205c0 0 358 0 358 0m-276-409c0 0 0 87 0 87c0 0-36 0-36 0c0 0 0-87 0-87c0 0 36 0 36 0m230 0c0 0 0 87 0 87c0 0-36 0-36 0c0 0 0-87 0-87c0 0 36 0 36 0"/>
+    </symbol>
+  
+    <symbol id="icon-plus-circled" viewBox="0 0 512 512">
+      <path d="m256 41c59 0 110 21 152 63c42 42 63 93 63 152c0 59-21 110-63 152c-42 42-93 63-152 63c-59 0-110-21-152-63c-42-42-63-93-63-152c0-59 21-110 63-152c42-42 93-63 152-63m27 241c0 0 102 0 102 0c0 0 0-53 0-53c0 0-102 0-102 0c0 0 0-103 0-103c0 0-53 0-53 0c0 0 0 103 0 103c0 0-103 0-103 0c0 0 0 53 0 53c0 0 103 0 103 0c0 0 0 103 0 103c0 0 53 0 53 0c0 0 0-103 0-103"/>
+    </symbol>
+  
+    <symbol id="icon-settings-1" viewBox="0 0 512 512">
+      <path d="m213 181c44 0 79 33 85 75l75 0c-1-10-3-20-5-29l61-35l-43-74l-61 35c-19-19-42-33-69-40l0-70l-85 0l0 70c-27 7-51 21-70 40l-60-35l-43 74l61 35c-4 12-6 26-6 40c0 13 2 27 6 40l-61 35l43 74l60-35c19 18 43 32 70 40l0 70l85 0l0-151c-13 7-27 12-43 12c-47 0-85-38-85-85c0-47 38-86 85-86z m278 203c0-8-2-15-4-23l40-23l-22-36l-39 22c-11-11-24-18-39-22l0-46l-43 0l0 46c-15 4-29 11-40 22l-39-22l-21 36l39 23c-2 8-3 15-3 23c0 8 1 15 3 23l-39 23l21 36l39-22c11 11 25 18 40 22l0 46l43 0l0-46c15-4 28-11 39-22l40 22l21-36l-40-23c2-8 4-15 4-23z m-86 43c-23 0-42-19-42-43c0-24 19-43 42-43c24 0 43 19 43 43c0 24-19 43-43 43z"/>
+    </symbol>
+  
+    <symbol id="icon-logout" viewBox="0 0 512 512">
+      <path d="m283 435c0 0 0-51 0-51c0 0 50 0 50 0c0 0 0 51 0 51c0 14-5 26-15 36c-10 10-22 15-36 15c0 0-205 0-205 0c-14 0-26-5-36-15c-10-10-15-22-15-36c0 0 0-358 0-358c0-15 5-27 15-37c10-9 22-14 36-14c0 0 205 0 205 0c14 0 26 5 36 14c10 10 15 22 15 37c0 0 0 77 0 77c0 0-50 0-50 0c0 0 0-77 0-77c0 0-206 0-206 0c0 0 0 358 0 358c0 0 206 0 206 0m203-167c0 0-101 101-101 101c0 0 0-62 0-62c0 0-230 0-230 0c0 0 0-77 0-77c0 0 230 0 230 0c0 0 0-61 0-61c0 0 101 99 101 99"/>
+    </symbol>
+  
+    <symbol id="icon-upload-cloud" viewBox="0 0 512 512">
+      <path d="m389 182c34 0 63 12 87 35c24 23 36 52 36 85c0 34-12 62-36 85c-24 23-53 35-87 35c0 0-97 0-97 0c0 0 0-97 0-97c0 0 54 0 54 0c0 0-90-118-90-118c0 0-89 118-89 118c0 0 53 0 53 0c0 0 0 97 0 97c0 0-127 0-127 0c-25 0-47-9-65-27c-19-17-28-39-28-63c0-25 9-47 27-65c18-17 40-26 66-26c5 0 8 0 10 1c0-4-1-11-1-20c0-37 14-68 40-94c27-26 59-39 97-39c30 0 58 9 82 27c23 17 39 40 48 68c9-1 16-2 20-2"/>
+    </symbol>
+  
+    <symbol id="icon-settings-streamline-1" viewBox="0 0 512 512">
+      <path d="m480 203l-40 0c-4-14-9-27-16-40l28-28c6-6 9-14 9-22c0-9-3-17-9-23l-30-30c-12-12-33-12-45 0l-28 28c-13-7-26-12-40-16l0-40c0-18-14-32-32-32l-42 0c-18 0-32 14-32 32l0 40c-14 4-27 9-40 16l-28-28c-12-12-33-12-45 0l-30 30c-13 13-13 33 0 45l28 28c-7 13-12 26-16 40l-40 0c-9 0-17 3-23 9c-6 6-9 14-9 23l0 42c0 18 14 32 32 32l40 0c4 14 9 27 16 40l-28 28c-6 6-10 14-10 22c0 9 4 17 10 23l30 30c12 12 33 12 45 0l28-28c13 7 26 12 40 16l0 40c0 18 14 32 32 32l42 0c18 0 32-14 32-32l0-40c14-4 27-9 40-16l28 28c12 12 33 12 45 0l30-30c13-13 13-33 0-45l-28-28c7-13 12-26 16-40l40 0c9 0 17-3 23-9c6-6 9-14 9-23l0-42c0-18-14-32-32-32z m11 74c0 3-1 6-3 8c-2 2-5 3-8 3l-48 0c-5 0-9 3-10 8c-4 17-11 34-20 49c-3 4-2 9 1 13l34 34c4 4 4 11 0 15l-30 30c-4 4-11 4-15 0l-34-34c-4-3-9-4-13-1c-15 9-32 16-49 20c-5 1-8 5-8 10l0 48c0 6-5 11-11 11l-42 0c-6 0-11-5-11-11l0-48c0-5-3-9-8-10c-17-4-34-11-49-20c-1-2-3-2-5-2c-3 0-6 1-8 3l-34 34c-4 4-11 4-15 0l-30-30c-2-2-3-5-3-8c0-2 1-5 3-7l34-34c3-4 4-9 1-13c-9-15-16-32-20-49c-1-5-5-8-10-8l-48 0c-6 0-11-5-11-11l0-42c0-3 1-6 3-8c2-2 5-3 8-3l48 0c5 0 9-3 10-8c4-17 11-34 20-49c3-4 2-9-1-13l-34-34c-4-4-4-11 0-15l30-30c4-4 11-4 15 0l34 34c4 3 9 4 13 1c15-9 32-16 49-20c5-1 8-5 8-10l0-48c0-6 5-11 11-11l42 0c6 0 11 5 11 11l0 48c0 5 3 9 8 10c17 4 34 11 49 20c4 3 9 2 13-1l34-34c4-4 11-4 15 0l30 30c2 2 3 5 3 8c0 2-1 5-3 7l-34 34c-3 4-4 9-1 13c9 15 16 32 20 49c1 5 5 8 10 8l48 0c6 0 11 5 11 11z m-235-128c-59 0-107 48-107 107c0 59 48 107 107 107c59 0 107-48 107-107c0-59-48-107-107-107z m0 192c-47 0-85-38-85-85c0-47 38-85 85-85c47 0 85 38 85 85c0 47-38 85-85 85z"/>
+    </symbol>
+  
+    <symbol id="icon-gear" viewBox="0 0 512 512">
+      <path d="m256 175c-45 0-81 36-81 81 0 45 36 81 81 81 45 0 81-36 81-81 0-45-36-81-81-81z m162 128l-14 35 26 51 3 7-36 36-59-28-35 14-18 55-2 7-51 0-22-62-36-14-51 26-7 3-36-36 28-59-14-35-55-18-7-2 0-51 62-22 14-36-26-51-3-7 36-36 59 28 35-14 18-55 2-7 51 0 22 62 36 14 51-26 7-3 36 36-28 59 14 35 55 18 7 2 0 51z"/>
+    </symbol>
+  
+    <symbol id="icon-circle" viewBox="0 0 512 512">
+      <path d="m475 256c0 40-9 77-29 110-20 34-46 60-80 80-33 20-70 29-110 29-40 0-77-9-110-29-34-20-60-46-80-80-20-33-29-70-29-110 0-40 9-77 29-110 20-34 46-60 80-80 33-20 70-29 110-29 40 0 77 9 110 29 34 20 60 46 80 80 20 33 29 70 29 110z"/>
+    </symbol>
+  
+    <symbol id="icon-gratipay" viewBox="0 0 512 512">
+      <path d="m257 372l100-135c3-4 6-10 7-17 2-7 1-15-1-24-3-9-9-17-18-23-7-5-15-7-24-7-8 0-15 2-21 5-5 3-11 7-15 13-7 7-16 11-28 11-11 0-20-4-27-11-4-6-9-10-15-13-6-3-13-5-21-5-8 0-16 2-24 7-9 6-15 14-18 23-2 9-3 17-1 24 1 7 4 13 7 17z m218-116c0 40-9 77-29 110-20 34-46 60-80 80-33 20-70 29-110 29-40 0-77-9-110-29-34-20-60-46-80-80-20-33-29-70-29-110 0-40 9-77 29-110 20-34 46-60 80-80 33-20 70-29 110-29 40 0 77 9 110 29 34 20 60 46 80 80 20 33 29 70 29 110z"/>
+    </symbol>
+  
+    <symbol id="icon-phone" viewBox="0 0 512 512">
+      <path d="m457 354c0 5-1 12-3 20-2 9-4 15-6 20-4 10-15 20-35 30-17 10-35 15-53 15-5 0-10 0-15-1-5-1-10-2-16-4-6-1-11-3-14-4-3-1-8-3-16-6-7-3-12-4-14-5-18-7-35-14-50-24-24-15-49-35-75-61-26-26-47-51-62-76-9-14-17-31-23-50-1-1-3-6-6-14-2-7-4-13-5-16-1-3-3-7-5-13-1-6-2-12-3-17-1-4-1-9-1-15 0-17 5-35 14-53 11-19 21-31 31-35 4-2 11-4 19-6 9-1 15-2 20-2 3 0 5 0 6 0 4 2 9 9 16 22 2 4 5 9 8 16 4 6 7 12 10 18 3 5 6 10 9 15 1 1 2 3 5 7 3 4 5 8 6 10 1 3 2 6 2 8 0 4-3 9-8 15-5 5-11 11-18 15-6 5-12 10-17 16-6 5-9 9-9 13 0 1 1 4 2 6 1 3 2 5 2 6 1 1 2 4 4 7 2 3 3 5 4 5 14 26 31 49 49 67 19 19 41 36 67 50 1 0 3 1 6 3 3 2 5 4 7 4 1 1 3 2 6 3 2 1 4 1 6 1 3 0 8-2 13-8 5-5 11-11 15-18 5-6 10-12 16-17 6-6 10-8 14-8 3 0 6 0 8 2 3 1 7 3 11 6 4 2 6 4 7 5 4 3 10 6 15 9 5 3 11 6 18 10 7 3 12 6 16 8 13 7 20 12 21 15 1 2 1 4 1 6z"/>
+    </symbol>
+  
+    <symbol id="icon-heart" viewBox="0 0 512 512">
+      <path d="m346 69c-36 0-69 17-90 44c-21-27-54-44-90-44c-63 0-114 51-114 114c-1 68 32 108 58 140l6 7c31 39 128 108 132 111c2 1 5 2 8 2c3 0 6-1 8-2c4-3 101-72 132-111l6-7c26-32 59-72 59-140c-1-63-52-114-115-114z"/>
+    </symbol>
+  
+</svg>
+
+
+<div class="container">
+  <p class="small">This SVG sprite was created with <a href="http://fontastic.me/">Fontastic</a></p>
+
+  <h2>icons reference</h2>
+  <ul class="glyphs">
+    
+    <li>
+      <svg class="icon-add">
+        <use xlink:href="#icon-add"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-add"><use xlink:href="#icon-add"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-settings">
+        <use xlink:href="#icon-settings"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-settings"><use xlink:href="#icon-settings"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-check-circle">
+        <use xlink:href="#icon-check-circle"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-check-circle"><use xlink:href="#icon-check-circle"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-linkedin">
+        <use xlink:href="#icon-linkedin"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-linkedin-square">
+        <use xlink:href="#icon-linkedin-square"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-linkedin-square"><use xlink:href="#icon-linkedin-square"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-youtube-square">
+        <use xlink:href="#icon-youtube-square"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-youtube-square"><use xlink:href="#icon-youtube-square"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-youtube">
+        <use xlink:href="#icon-youtube"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-youtube"><use xlink:href="#icon-youtube"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-tag">
+        <use xlink:href="#icon-tag"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-tag"><use xlink:href="#icon-tag"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-tags">
+        <use xlink:href="#icon-tags"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-tags"><use xlink:href="#icon-tags"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-facebook">
+        <use xlink:href="#icon-facebook"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-facebook"><use xlink:href="#icon-facebook"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-facebook-square">
+        <use xlink:href="#icon-facebook-square"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-facebook-square"><use xlink:href="#icon-facebook-square"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-heart-empty">
+        <use xlink:href="#icon-heart-empty"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-heart-empty"><use xlink:href="#icon-heart-empty"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-exclamation-circle">
+        <use xlink:href="#icon-exclamation-circle"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-exclamation-circle"><use xlink:href="#icon-exclamation-circle"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-search">
+        <use xlink:href="#icon-search"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-search"><use xlink:href="#icon-search"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-notification">
+        <use xlink:href="#icon-notification"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-notification"><use xlink:href="#icon-notification"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-usd">
+        <use xlink:href="#icon-usd"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-usd"><use xlink:href="#icon-usd"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-twitter">
+        <use xlink:href="#icon-twitter"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-twitter"><use xlink:href="#icon-twitter"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-twitter-alt">
+        <use xlink:href="#icon-twitter-alt"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-twitter-alt"><use xlink:href="#icon-twitter-alt"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-heart-1">
+        <use xlink:href="#icon-heart-1"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-heart-1"><use xlink:href="#icon-heart-1"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-help-circled">
+        <use xlink:href="#icon-help-circled"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-help-circled"><use xlink:href="#icon-help-circled"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-tag-1">
+        <use xlink:href="#icon-tag-1"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-tag-1"><use xlink:href="#icon-tag-1"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-basket">
+        <use xlink:href="#icon-basket"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-basket"><use xlink:href="#icon-basket"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-camera">
+        <use xlink:href="#icon-camera"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-camera"><use xlink:href="#icon-camera"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-picture">
+        <use xlink:href="#icon-picture"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-picture"><use xlink:href="#icon-picture"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-calendar">
+        <use xlink:href="#icon-calendar"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-calendar"><use xlink:href="#icon-calendar"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-plus-circled">
+        <use xlink:href="#icon-plus-circled"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-plus-circled"><use xlink:href="#icon-plus-circled"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-settings-1">
+        <use xlink:href="#icon-settings-1"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-settings-1"><use xlink:href="#icon-settings-1"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-logout">
+        <use xlink:href="#icon-logout"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-logout"><use xlink:href="#icon-logout"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-upload-cloud">
+        <use xlink:href="#icon-upload-cloud"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-upload-cloud"><use xlink:href="#icon-upload-cloud"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-settings-streamline-1">
+        <use xlink:href="#icon-settings-streamline-1"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-settings-streamline-1"><use xlink:href="#icon-settings-streamline-1"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-gear">
+        <use xlink:href="#icon-gear"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-gear"><use xlink:href="#icon-gear"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-circle">
+        <use xlink:href="#icon-circle"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-circle"><use xlink:href="#icon-circle"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-gratipay">
+        <use xlink:href="#icon-gratipay"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-gratipay"><use xlink:href="#icon-gratipay"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-phone">
+        <use xlink:href="#icon-phone"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-phone"><use xlink:href="#icon-phone"></use></svg>'>
+    </li>
+    
+    <li>
+      <svg class="icon-heart">
+        <use xlink:href="#icon-heart"></use>
+      </svg>
+
+      <input type="text" readonly="readonly" value='<svg class="icon-heart"><use xlink:href="#icon-heart"></use></svg>'>
+    </li>
+    
+  </ul>
+
+  <h2>How to add SVG sprite icons to your project?</h2>
+
+<div class="tip"><p></p><div class="number">1</div>Upload the icons.svg file to your server. In our examples below we assume that the sprite file will be available at: <code>http://yoursite.com/images/icons.svg</code><p></p></div><div class="tip"><p></p><div class="number">2</div>Go to "Icons Reference" and choose an icon that you want to have on your HTML page. Then click and copy its markup to your HTML page. For instance, the markup for a twitter icon could look like this:<p></p><pre><code><span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-twitter"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#icon-twitter"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+</code></pre></div><div class="tip"><p></p><div class="number">3</div>Now it's time to add the sprite file URL to the icon markup. In the example below, the URL is <code>/images/icons.svg</code>. So now the twitter icon markup could look like this:<p></p><pre><code><span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-twitter"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"/images/icons.svg#icon-twitter"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+</code></pre></div><div class="tip"><p></p><div class="number">4</div>Add the code below to the CSS file that you use for your html page:<p></p><pre><code><span class="hljs-attr_selector">[class^="icon-"]</span>, <span class="hljs-attr_selector">[class*=" icon-"]</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">32</span>px</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">32</span>px</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> inline-block</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">fill</span>:<span class="hljs-value"> currentColor</span></span>;
+<span class="hljs-rule">}</span></span>
+</code></pre><p>You can use <code>height</code> and <code>width</code> properties to control icon size. To define icon color use <code>fill</code> property. Note: <code>currentColor</code> keyword inherits the color value of a parent element.</p></div><div class="tip"><p></p><div class="number">5</div>For IE capability you can use a great polyfill: <a href="https://github.com/jonathantneal/svg4everybody" target="blank">svg4everybody</a><p></p></div><div class="tip"><p> <b>Remember: </b>with Icon Cloud you don't have to worry about IE capability, the sprite file and other stuff. We'll take care of all of that for you, just click the "Publish" button and give it a try.</p></div>
+
+</div>
+
+<script type="text/javascript">
+(function() {
+  var glyphs, _i, _len, _ref;
+
+  _ref = document.getElementsByClassName('glyphs');
+  for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+    glyphs = _ref[_i];
+    glyphs.addEventListener('click', function(event) {
+      if (event.target.tagName === 'INPUT') {
+        return event.target.select();
+      }
+    });
+  }
+
+}).call(this);
+</script>
+</body>
+</html>
