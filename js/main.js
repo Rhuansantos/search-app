@@ -6,16 +6,13 @@ class main{
 static searchPet() {
 	console.log('ok');
 	const zipCode = document.querySelector('#location').value;
+	// const zipCode = document.querySelector('#location').value;
 
 	// search params
 	let params = new FormData();
-	params.append("location", "32792");
+	params.append("location", zipCode);
 	params.append("limit", "12");
-
-	// let requestReponse = {};
-
-
-
+	params.append("type", "cat");
 
 	let adopets = new search('https://api.beta.adopets.org/pet/find', "POST", null, params);
 

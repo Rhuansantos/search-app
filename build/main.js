@@ -126,14 +126,13 @@ var main = function () {
 		value: function searchPet() {
 			console.log('ok');
 			var zipCode = document.querySelector('#location').value;
+			// const zipCode = document.querySelector('#location').value;
 
 			// search params
 			var params = new FormData();
-			params.append("location", "32792");
+			params.append("location", zipCode);
 			params.append("limit", "12");
-
-			// let requestReponse = {};
-
+			params.append("type", "cat");
 
 			var adopets = new _core.search('https://api.beta.adopets.org/pet/find', "POST", null, params);
 		}

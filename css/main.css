@@ -6,6 +6,30 @@
 *:focus {
   outline: none; }
 
+a:link {
+  color: white;
+  text-decoration: none; }
+
+a:visited {
+  color: white;
+  text-decoration: none; }
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid white;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px none inset;
+  transition: background-color 5000s ease-in-out 0s; }
+
 @font-face {
   font-family: 'quicksanddash';
   src: url("/../../fonts/quicksand/quicksand_dash-webfont.woff2") format("woff2"), url("/../../fonts/quicksand/quicksand_dash-webfont.woff") format("woff");
@@ -73,6 +97,8 @@ header {
         margin-left: 10%;
         padding-top: 10px;
         color: white; }
+        header nav ul li a {
+          text-transform: uppercase; }
   header #logo {
     width: 230px;
     display: block;
@@ -89,6 +115,8 @@ header {
       background: none;
       color: white;
       border: solid 1px white; }
+    header form input:-webkit-autofill {
+      background: #B23A63; }
     header form input[type='submit'] {
       width: 170px;
       background: white;
@@ -97,7 +125,12 @@ header {
       appearance: none;
       padding-left: 20px; }
     header form #breed {
-      width: 300px; }
+      width: 280px; }
+    header form #location {
+      padding-left: 20px;
+      color: white; }
+      header form #location :placeholder {
+        color: white; }
   header p {
     font-family: quicksandlight;
     color: white;
@@ -106,7 +139,7 @@ header {
     margin-bottom: 70px; }
 
 section {
-  width: 960px;
+  width: 1290px;
   margin: 0 auto; }
 
 #pets li {
