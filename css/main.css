@@ -57,10 +57,10 @@
 header {
   width: 100vw;
   height: 100vh;
-  background: url("/img/header-background@1920x-100.jpg") center;
-  font-family: quicksandbold; }
+  background: url("/img/header-background@1920x-100.jpg") no-repeat center #B23A63;
+  font-family: quicksandbold;
+  margin-bottom: 100px; }
   header nav {
-    width: 100vw;
     height: 100px;
     padding-top: 10px;
     margin-left: 3%;
@@ -104,3 +104,35 @@ header {
     text-align: center;
     font-size: 28px;
     margin-bottom: 70px; }
+
+section {
+  width: 960px;
+  margin: 0 auto; }
+
+#pets li {
+  list-style-type: none;
+  float: left;
+  width: 250px;
+  height: 400px;
+  margin-left: 50px; }
+  #pets li img {
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: cover; }
+  #pets li h1 {
+    font-family: quicksandbold;
+    text-align: center;
+    color: #B23A63;
+    font-size: 26px;
+    padding-top: 10px;
+    display: block; }
+  #pets li h2 {
+    font-family: quicksandregular;
+    font-size: 16px;
+    float: left;
+    width: 50%;
+    padding-top: 10px;
+    color: #B23A63; }
+    #pets li h2 span {
+      color: black; }

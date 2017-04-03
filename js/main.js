@@ -10,19 +10,14 @@ static searchPet() {
 	// search params
 	let params = new FormData();
 	params.append("location", "32792");
+	params.append("limit", "12");
 
-	let requestReponse = {};
-
-	requestReponse.name = "rhuan";
-
-	var petTemplate = `
-		<li>${requestReponse.name}</li>
-		<li>${requestReponse.age}</li>
-		<li>${requestReponse.breed}</li>
-	`;
+	// let requestReponse = {};
 
 
-	let adopets = new search('https://api.beta.adopets.org/pet/find', "POST", petTemplate, params);
+
+
+	let adopets = new search('https://api.beta.adopets.org/pet/find', "POST", null, params);
 
 }
 

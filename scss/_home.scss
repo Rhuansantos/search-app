@@ -1,0 +1,45 @@
+section{
+	width: 960px;
+	margin: 0 auto;
+// 	margin-top: 100px;
+}
+
+#pets{
+	// margin-top: 150px;
+	li{
+		list-style-type: none;
+		float: left;
+		width: 250px;
+		height: 400px;
+		margin-left: 50px;
+
+		img{
+			width: 100%;
+			min-height: 200px;
+			max-height: 200px;
+			object-fit: cover;
+		}
+
+		h1{
+			font-family: $bold;
+			text-align: center;
+			color: $primary-color;
+			font-size: 26px;
+			padding-top: 10px;
+			display: block;
+		}
+		h2{
+			font-family: $regular;
+			font-size: 16px;
+			float: left;
+			width: 50%;
+			padding-top: 10px;
+			color: $primary-color;
+
+			span{
+				color: black;
+			}
+		}
+
+	}
+}

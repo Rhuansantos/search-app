@@ -1,11 +1,11 @@
 header{
 	width: 100vw;
 	height: 100vh;
-	background: url("/img/header-background@1920x-100.jpg") center;
+	background: url("/img/header-background@1920x-100.jpg") no-repeat center $primary-color;
 	font-family: $bold;
-
+	margin-bottom: 100px;
+	
 	nav{
-	width: 100vw;
 	height: 100px;
 	padding-top: 10px;
 	margin-left: 3%;

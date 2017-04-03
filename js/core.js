@@ -23,7 +23,7 @@ class request{
 
 		     // seding request for template
 		     let test = new search();
-		     test.printTemplate(requestReponse, grabTemplate);
+		     test.printTemplate(requestReponse);
 
 		    }
   		};
@@ -56,9 +56,10 @@ export class search extends request{
 
 
   // print the cards template
-  printTemplate(_response, _template){
+  printTemplate(_response){
 
-  	console.log("response", this.template, "response2", _template);
+  	console.log(_response);
+
   	//Container that the template will be printed
 	var section = document.querySelector('#pets');
 
@@ -67,9 +68,18 @@ export class search extends request{
 
   		let requestReponse = _response.data[i];
 
+		var petTemplate = `
+		<li>
+			<img src="${requestReponse.picture}" alt="" />
+			<h1>${requestReponse.name}</h1>
+			<h2>Age: <span>${requestReponse.age}</span></h2>
+			<h2>Breed: <span>${requestReponse.breed}</span></h2>
+		</li>
+		`;
+
 
 		// printing
-  		section.insertAdjacentHTML('beforeend', _template);
+  		section.insertAdjacentHTML('beforeend', petTemplate);
 
   	}
 

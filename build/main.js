@@ -1,5 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -26,7 +26,7 @@ var request = function () {
 
 
 	_createClass(request, [{
-		key: "response",
+		key: 'response',
 		value: function response(_params) {
 
 			var grabTemplate = this.template;
@@ -43,7 +43,7 @@ var request = function () {
 
 					// seding request for template
 					var test = new search();
-					test.printTemplate(requestReponse, grabTemplate);
+					test.printTemplate(requestReponse);
 				}
 			};
 
@@ -74,7 +74,7 @@ var search = exports.search = function (_request) {
 	}
 
 	_createClass(search, [{
-		key: "query",
+		key: 'query',
 		value: function query(_params) {
 
 			this.response(_params);
@@ -83,10 +83,11 @@ var search = exports.search = function (_request) {
 		// print the cards template
 
 	}, {
-		key: "printTemplate",
-		value: function printTemplate(_response, _template) {
+		key: 'printTemplate',
+		value: function printTemplate(_response) {
 
-			console.log("response", this.template, "response2", _template);
+			console.log(_response);
+
 			//Container that the template will be printed
 			var section = document.querySelector('#pets');
 
@@ -95,8 +96,10 @@ var search = exports.search = function (_request) {
 
 				var requestReponse = _response.data[i];
 
+				var petTemplate = '\n\t\t<li>\n\t\t\t<img src="' + requestReponse.picture + '" alt="" />\n\t\t\t<h1>' + requestReponse.name + '</h1>\n\t\t\t<h2>Age: <span>' + requestReponse.age + '</span></h2>\n\t\t\t<h2>Breed: <span>' + requestReponse.breed + '</span></h2>\n\t\t</li>\n\t\t';
+
 				// printing
-				section.insertAdjacentHTML('beforeend', _template);
+				section.insertAdjacentHTML('beforeend', petTemplate);
 			}
 		}
 	}]);
@@ -127,14 +130,12 @@ var main = function () {
 			// search params
 			var params = new FormData();
 			params.append("location", "32792");
+			params.append("limit", "12");
 
-			var requestReponse = {};
+			// let requestReponse = {};
 
-			requestReponse.name = "rhuan";
 
-			var petTemplate = '\n\t\t<li>' + requestReponse.name + '</li>\n\t\t<li>' + requestReponse.age + '</li>\n\t\t<li>' + requestReponse.breed + '</li>\n\t';
-
-			var adopets = new _core.search('https://api.beta.adopets.org/pet/find', "POST", petTemplate, params);
+			var adopets = new _core.search('https://api.beta.adopets.org/pet/find', "POST", null, params);
 		}
 	}, {
 		key: 'searchMusic',
