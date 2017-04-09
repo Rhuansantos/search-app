@@ -881,7 +881,8 @@ header {
   header form {
     max-width: 75rem;
     margin-right: auto;
-    margin-left: auto; }
+    margin-left: auto;
+    border: solid 1px red; }
     header form::before, header form::after {
       display: table;
       content: ' '; }
@@ -889,38 +890,113 @@ header {
       clear: both; }
     header form input, header form select {
       border-radius: 7px;
-      width: 210px;
       height: 40px;
-      margin-left: 10px;
+      margin-left: 13px;
+      margin-bottom: 20px;
       background: none;
       color: white;
       border: solid 1px white; }
     header form input:-webkit-autofill {
       background: #B23A63; }
     header form input[type='submit'] {
-      width: 170px;
+      width: 16.66667%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
       background: white;
       color: black; }
+      @media print, screen and (min-width: 40em) {
+        header form input[type='submit'] {
+          padding-right: 0.9375rem;
+          padding-left: 0.9375rem; } }
+      header form input[type='submit']:last-child:not(:first-child) {
+        float: right; }
     header form select {
-      appearance: none;
-      padding-left: 20px; }
+      appearance: none; }
+    header form #gender {
+      width: 16.66667%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem; }
+      @media print, screen and (min-width: 40em) {
+        header form #gender {
+          padding-right: 0.9375rem;
+          padding-left: 0.9375rem; } }
+      header form #gender:last-child:not(:first-child) {
+        float: right; }
+    header form #type, header form #location {
+      width: 16.66667%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem; }
+      @media print, screen and (min-width: 40em) {
+        header form #type, header form #location {
+          padding-right: 0.9375rem;
+          padding-left: 0.9375rem; } }
+      header form #type:last-child:not(:first-child), header form #location:last-child:not(:first-child) {
+        float: right; }
     header form #breed {
-      width: 280px; }
-    header form #location {
-      padding-left: 20px;
-      color: white; }
-      header form #location :placeholder {
-        color: white; }
+      width: 25%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+      float: none !important; }
+      @media print, screen and (min-width: 40em) {
+        header form #breed {
+          padding-right: 0.9375rem;
+          padding-left: 0.9375rem; } }
+      header form #breed:last-child:not(:first-child) {
+        float: right; }
+    @media screen and (max-width: 77.5em) {
+      header form {
+        margin-left: 5%;
+        margin-right: 5%; }
+        header form #breed, header form #type, header form #location, header form #gender {
+          width: 45.83333%;
+          float: left;
+          padding-right: 0.625rem;
+          padding-left: 0.625rem; } }
+    @media screen and (max-width: 77.5em) and (min-width: 40em) {
+      header form #breed, header form #type, header form #location, header form #gender {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    @media screen and (max-width: 77.5em) {
+          header form #breed:last-child:not(:first-child), header form #type:last-child:not(:first-child), header form #location:last-child:not(:first-child), header form #gender:last-child:not(:first-child) {
+            float: right; }
+        header form #location, header form #type {
+          clear: both; }
+        header form input[type='submit'] {
+          float: none !important;
+          width: 95.83333%;
+          float: left;
+          padding-right: 0.625rem;
+          padding-left: 0.625rem; } }
+    @media screen and (max-width: 77.5em) and (min-width: 40em) {
+      header form input[type='submit'] {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    @media screen and (max-width: 77.5em) {
+          header form input[type='submit']:last-child:not(:first-child) {
+            float: right; } }
+    @media screen and (max-width: 49.0625em) {
+      header form #type, header form #location, header form #gender, header form #breed, header form input[type='submit'] {
+        width: 91.66667%;
+        float: left;
+        padding-right: 0.625rem;
+        padding-left: 0.625rem; } }
+  @media screen and (max-width: 49.0625em) and (min-width: 40em) {
+    header form #type, header form #location, header form #gender, header form #breed, header form input[type='submit'] {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+    @media screen and (max-width: 49.0625em) {
+        header form #type:last-child:not(:first-child), header form #location:last-child:not(:first-child), header form #gender:last-child:not(:first-child), header form #breed:last-child:not(:first-child), header form input[type='submit']:last-child:not(:first-child) {
+          float: right; } }
   header p {
     font-family: quicksandlight;
     color: white;
     text-align: center;
     font-size: 28px;
     margin-bottom: 70px; }
-
-section {
-  width: 1290px;
-  margin: 0 auto; }
 
 #pets li {
   list-style-type: none;

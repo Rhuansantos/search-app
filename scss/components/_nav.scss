@@ -11,8 +11,6 @@ header{
 		padding-top: 10px;
 		margin-left: 3%;
 		margin-bottom: 100px;
-		// background: black;
-		// opacity: 0.1;
 
 		ul{
 			width: 80%;
@@ -38,15 +36,16 @@ header{
 	}
 
 	form{
+
 		@include grid-row();
-		// width: 960px;
-		// margin: 0 auto;
+
+		border: solid 1px red;
 
 		input, select{
-			border-radius: 7px;
-			width: 210px;
+			border-radius: 7px;	
 			height: 40px;
-			margin-left: 10px;
+			margin-left: 13px;
+			margin-bottom: 20px;
 			background: none;
 			color: white;
 			border: solid 1px white;
@@ -56,24 +55,46 @@ header{
 			background: $primary-color;
 		}
 		input[type='submit']{
-			width: 170px;
+		 	@include grid-col(2);
 			background: white;
 			color: black;
 		}
 		select{
 			appearance: none;
-			padding-left: 20px;
+		}
+		#gender{
+			@include grid-col(2);
+		}
+
+		#type, #location{
+			@include grid-col(2);
 		}
 
 		#breed{
-			width: 280px;
+			@include grid-col(3);	
+			float: none !important;	
 		}
-		#location{
-			padding-left: 20px;
-			color: white;
 
-			:placeholder{
-				color: white;
+		@include breakpoint(1240px down) {
+
+			margin-left: 5%;
+			margin-right: 5%;
+
+			#breed,#type, #location, #gender{
+				@include grid-col(5.5);
+			}
+			#location, #type{
+				clear: both;
+			}
+			input[type='submit']{
+				float: none !important;	
+				@include grid-col(11.5);
+			}
+		}
+
+		@include breakpoint(785px down) {		
+			#type, #location, #gender, #breed, input[type='submit']{
+				@include grid-col(11);
 			}
 		}
 
