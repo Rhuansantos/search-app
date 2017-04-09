@@ -1,9 +1,15 @@
+// framework
+@import 'foundation/foundation';
+
+@include foundation-grid;
+
 // standard components
 @import "components/variables";
 @import "components/reset";
 @import "components/utilities";
 @import "components/fonts";
 @import "components/nav";
+
 
 // pages
 @import "home";

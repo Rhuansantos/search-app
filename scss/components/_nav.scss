@@ -38,8 +38,9 @@ header{
 	}
 
 	form{
-		width: 960px;
-		margin: 0 auto;
+		@include grid-row();
+		// width: 960px;
+		// margin: 0 auto;
 
 		input, select{
 			border-radius: 7px;
