@@ -806,49 +806,49 @@ select:-webkit-autofill:focus {
 
 @font-face {
   font-family: 'quicksanddash';
-  src: url("/../../fonts/quicksand/quicksand_dash-webfont.woff2") format("woff2"), url("/../../fonts/quicksand/quicksand_dash-webfont.woff") format("woff");
+  src: url("/search-app/fonts/quicksand/quicksand_dash-webfont.woff2") format("woff2"), url("/search-app/fonts/quicksand/quicksand_dash-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'quicksandbold';
-  src: url("/../../fonts/quicksand/quicksand-bold-webfont.woff2") format("woff2"), url("/../../fonts/quicksand/quicksand-bold-webfont.woff") format("woff");
+  src: url("/search-app/fonts/quicksand/quicksand-bold-webfont.woff2") format("woff2"), url("/search-app/fonts/quicksand/quicksand-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'quicksandbold_italic';
-  src: url("/../../fonts/quicksand/quicksand-bolditalic-webfont.woff2") format("woff2"), url("/../../fonts/quicksand/quicksand-bolditalic-webfont.woff") format("woff");
+  src: url("/search-app/fonts/quicksand/quicksand-bolditalic-webfont.woff2") format("woff2"), url("/search-app/fonts/quicksand/quicksand-bolditalic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'quicksanditalic';
-  src: url("/../../fonts/quicksand/quicksand-italic-webfont.woff2") format("woff2"), url("/../../fonts/quicksand/quicksand-italic-webfont.woff") format("woff");
+  src: url("/search-app/fonts/quicksand/quicksand-italic-webfont.woff2") format("woff2"), url("/search-app/fonts/quicksand/quicksand-italic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'quicksandlight';
-  src: url("/../../fonts/quicksand/quicksand-light-webfont.woff2") format("woff2"), url("/../../fonts/quicksand/quicksand-light-webfont.woff") format("woff");
+  src: url("/search-app/fonts/quicksand/quicksand-light-webfont.woff2") format("woff2"), url("/search-app/fonts/quicksand/quicksand-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'quicksandlight_italic';
-  src: url("/../../fonts/quicksand/quicksand-lightitalic-webfont.woff2") format("woff2"), url("/../../fonts/quicksand/quicksand-lightitalic-webfont.woff") format("woff");
+  src: url("/search-app/fonts/quicksand/quicksand-lightitalic-webfont.woff2") format("woff2"), url("/search-app/fonts/quicksand/quicksand-lightitalic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'quicksandregular';
-  src: url("/../../fonts/quicksand/quicksand-regular-webfont.woff2") format("woff2"), url("/../../fonts/quicksand/quicksand-regular-webfont.woff") format("woff");
+  src: url("/search-app/fonts/quicksand/quicksand-regular-webfont.woff2") format("woff2"), url("/search-app/fonts/quicksand/quicksand-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'icon';
-  src: url("/../../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("/../../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff");
+  src: url("/search-app/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("/search-app/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -857,7 +857,7 @@ header {
   min-height: 100vh;
   max-height: 1035px;
   height: auto;
-  background: url("/img/header-background@1920x-100.jpg") no-repeat center #B23A63;
+  background: url("/search-app/img/header-background@1920x-100.jpg") no-repeat center #B23A63;
   font-family: quicksandbold;
   margin-bottom: 100px; }
   header nav {
