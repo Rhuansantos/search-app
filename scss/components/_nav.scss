@@ -39,12 +39,10 @@ header{
 
 		@include grid-row();
 
-		border: solid 1px red;
-
 		input, select{
 			border-radius: 7px;	
 			height: 40px;
-			margin-left: 13px;
+			margin-left: 20px;
 			margin-bottom: 20px;
 			background: none;
 			color: white;
@@ -65,6 +63,10 @@ header{
 		#gender{
 			@include grid-col(2);
 		}
+		#location{
+			padding-left: 15px;
+    		box-sizing: border-box;
+		}
 
 		#type, #location{
 			@include grid-col(2);
@@ -76,9 +78,8 @@ header{
 		}
 
 		@include breakpoint(1240px down) {
-
-			margin-left: 5%;
-			margin-right: 5%;
+		 	
+		 	margin-left: 3%;
 
 			#breed,#type, #location, #gender{
 				@include grid-col(5.5);
@@ -88,11 +89,13 @@ header{
 			}
 			input[type='submit']{
 				float: none !important;	
-				@include grid-col(11.5);
+				@include grid-col(11.2);
 			}
 		}
 
-		@include breakpoint(785px down) {		
+		@include breakpoint(785px down) {
+
+			margin-left: 0;		
 			#type, #location, #gender, #breed, input[type='submit']{
 				@include grid-col(11);
 			}
