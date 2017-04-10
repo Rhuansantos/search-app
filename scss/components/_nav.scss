@@ -1,6 +1,6 @@
 header{
 	width: 100vw;
-	height: 100vh;
+	height: auto;
 	background: url("/img/header-background@1920x-100.jpg") no-repeat center $primary-color;
 	font-family: $bold;
 	margin-bottom: 100px;
@@ -109,5 +109,11 @@ header{
 		text-align: center;
 		font-size: 28px;
 		margin-bottom: 70px;
+
+		@include breakpoint(450px down) {
+			
+			margin-bottom: 30px;
+			padding: 10px;
+		}
 	}
 }

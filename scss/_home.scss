@@ -1,7 +1,5 @@
 section{
-	// width: 1290px;
-	// margin: 0 auto;
-// 	margin-top: 100px;
+	@include grid-row();
 }
 
 #pets{
@@ -9,15 +7,32 @@ section{
 	li{
 		list-style-type: none;
 		float: left;
+		border: solid 1px red;
 		width: 250px;
 		height: 400px;
-		margin-left: 50px;
+		margin-left: 15px;
+
+		@include grid-col(2.5);
+
+		@include breakpoint(1240px down) {
+
+			@include grid-col(3);
+			margin-left: 40px;
+		}
+
+		@include breakpoint(970px down) {
+			@include grid-col(9);		
+		}
 
 		img{
 			width: 100%;
 			min-height: 200px;
 			max-height: 200px;
 			object-fit: cover;
+
+			@include breakpoint(970px down) {
+				@include grid-col(6);
+			}
 		}
 
 		h1{

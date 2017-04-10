@@ -42,6 +42,12 @@
     padding-right: 0px!important;
 }
 
+%standardMargin{
+    margin-left:  5%   !important;
+    margin-right: 5%   !important;
+    display: none !important;
+}
+
 
 @mixin sections{
     margin-top: 20px;

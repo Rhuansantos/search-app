@@ -854,7 +854,7 @@ select:-webkit-autofill:focus {
 
 header {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background: url("/img/header-background@1920x-100.jpg") no-repeat center #B23A63;
   font-family: quicksandbold;
   margin-bottom: 100px; }
@@ -1000,18 +1000,83 @@ header {
     text-align: center;
     font-size: 28px;
     margin-bottom: 70px; }
+    @media screen and (max-width: 28.125em) {
+      header p {
+        margin-bottom: 30px;
+        padding: 10px; } }
+
+section {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto; }
+  section::before, section::after {
+    display: table;
+    content: ' '; }
+  section::after {
+    clear: both; }
 
 #pets li {
   list-style-type: none;
   float: left;
+  border: solid 1px red;
   width: 250px;
   height: 400px;
-  margin-left: 50px; }
+  margin-left: 15px;
+  width: 20.83333%;
+  float: left;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem; }
+  @media print, screen and (min-width: 40em) {
+    #pets li {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  #pets li:last-child:not(:first-child) {
+    float: right; }
+  @media screen and (max-width: 77.5em) {
+    #pets li {
+      width: 25%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+      margin-left: 40px; } }
+  @media screen and (max-width: 77.5em) and (min-width: 40em) {
+    #pets li {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  @media screen and (max-width: 77.5em) {
+      #pets li:last-child:not(:first-child) {
+        float: right; } }
+  @media screen and (max-width: 60.625em) {
+    #pets li {
+      width: 75%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem; } }
+  @media screen and (max-width: 60.625em) and (min-width: 40em) {
+    #pets li {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  @media screen and (max-width: 60.625em) {
+      #pets li:last-child:not(:first-child) {
+        float: right; } }
   #pets li img {
     width: 100%;
     min-height: 200px;
     max-height: 200px;
     object-fit: cover; }
+    @media screen and (max-width: 60.625em) {
+      #pets li img {
+        width: 50%;
+        float: left;
+        padding-right: 0.625rem;
+        padding-left: 0.625rem; } }
+  @media screen and (max-width: 60.625em) and (min-width: 40em) {
+    #pets li img {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+    @media screen and (max-width: 60.625em) {
+        #pets li img:last-child:not(:first-child) {
+          float: right; } }
   #pets li h1 {
     font-family: quicksandbold;
     text-align: center;
