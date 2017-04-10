@@ -10,9 +10,10 @@ class main{
 		let params = new FormData();
 		params.append("location", zipCode);
 		params.append("limit", "12");
-		params.append("type", "cat");
+		params.append("type", "");
 
 		let adopets = new search('https://api.beta.adopets.org/pet/find', "POST", null, params);
+		// let adopets = new search('http://api.adopets.local:88/pet/find', "POST", null, params);
 
 	}
 
