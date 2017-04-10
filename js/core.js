@@ -71,9 +71,11 @@ export class search extends request{
 		var petTemplate = `
 		<li>
 			<img src="${requestReponse.picture}" alt="" />
+			<div class="pet-info">
 			<h1>${requestReponse.name}</h1>
 			<h2>Age: <span>${requestReponse.age}</span></h2>
 			<h2>Breed: <span>${requestReponse.breed}</span></h2>
+			</div>
 		</li>
 		`;
 

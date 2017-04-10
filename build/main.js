@@ -96,7 +96,7 @@ var search = exports.search = function (_request) {
 
 				var requestReponse = _response.data[i];
 
-				var petTemplate = '\n\t\t<li>\n\t\t\t<img src="' + requestReponse.picture + '" alt="" />\n\t\t\t<h1>' + requestReponse.name + '</h1>\n\t\t\t<h2>Age: <span>' + requestReponse.age + '</span></h2>\n\t\t\t<h2>Breed: <span>' + requestReponse.breed + '</span></h2>\n\t\t</li>\n\t\t';
+				var petTemplate = '\n\t\t<li>\n\t\t\t<img src="' + requestReponse.picture + '" alt="" />\n\t\t\t<div class="pet-info">\n\t\t\t<h1>' + requestReponse.name + '</h1>\n\t\t\t<h2>Age: <span>' + requestReponse.age + '</span></h2>\n\t\t\t<h2>Breed: <span>' + requestReponse.breed + '</span></h2>\n\t\t\t</div>\n\t\t</li>\n\t\t';
 
 				// printing
 				section.insertAdjacentHTML('beforeend', petTemplate);

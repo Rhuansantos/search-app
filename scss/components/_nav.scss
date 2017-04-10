@@ -1,12 +1,13 @@
 header{
 	width: 100vw;
+	min-height: 100vh;
+	max-height: 1035px;
 	height: auto;
 	background: url("/img/header-background@1920x-100.jpg") no-repeat center $primary-color;
 	font-family: $bold;
 	margin-bottom: 100px;
 	
 	nav{
-
 		height: 100px;
 		padding-top: 10px;
 		margin-left: 3%;
@@ -90,6 +91,7 @@ header{
 			input[type='submit']{
 				float: none !important;	
 				@include grid-col(11.2);
+				margin-bottom: 150px;
 			}
 		}
 
@@ -100,7 +102,6 @@ header{
 				@include grid-col(11);
 			}
 		}
-
 	}
 
 	p{

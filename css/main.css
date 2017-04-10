@@ -854,6 +854,8 @@ select:-webkit-autofill:focus {
 
 header {
   width: 100vw;
+  min-height: 100vh;
+  max-height: 1035px;
   height: auto;
   background: url("/img/header-background@1920x-100.jpg") no-repeat center #B23A63;
   font-family: quicksandbold;
@@ -971,7 +973,8 @@ header {
           width: 93.33333%;
           float: left;
           padding-right: 0.625rem;
-          padding-left: 0.625rem; } }
+          padding-left: 0.625rem;
+          margin-bottom: 150px; } }
     @media screen and (max-width: 77.5em) and (min-width: 40em) {
       header form input[type='submit'] {
         padding-right: 0.9375rem;
@@ -1018,7 +1021,6 @@ section {
 #pets li {
   list-style-type: none;
   float: left;
-  border: solid 1px red;
   width: 250px;
   height: 400px;
   margin-left: 15px;
@@ -1048,7 +1050,10 @@ section {
         float: right; } }
   @media screen and (max-width: 60.625em) {
     #pets li {
-      width: 75%;
+      margin-bottom: 60px;
+      height: 150px;
+      margin-left: 0;
+      width: 91.66667%;
       float: left;
       padding-right: 0.625rem;
       padding-left: 0.625rem; } }
@@ -1058,7 +1063,22 @@ section {
       padding-left: 0.9375rem; } }
   @media screen and (max-width: 60.625em) {
       #pets li:last-child:not(:first-child) {
-        float: right; } }
+        float: right; }
+      #pets li .pet-info {
+        width: 50%;
+        float: left;
+        padding-right: 0.625rem;
+        padding-left: 0.625rem; } }
+    @media screen and (max-width: 60.625em) and (min-width: 40em) {
+      #pets li .pet-info {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+  @media screen and (max-width: 60.625em) {
+        #pets li .pet-info:last-child:not(:first-child) {
+          float: right; }
+        #pets li .pet-info h1, #pets li .pet-info h2 {
+          width: 100%;
+          text-align: left; } }
   #pets li img {
     width: 100%;
     min-height: 200px;
@@ -1066,7 +1086,9 @@ section {
     object-fit: cover; }
     @media screen and (max-width: 60.625em) {
       #pets li img {
-        width: 50%;
+        min-height: 150px;
+        max-height: 150px;
+        width: 33.33333%;
         float: left;
         padding-right: 0.625rem;
         padding-left: 0.625rem; } }
