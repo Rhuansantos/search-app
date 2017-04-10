@@ -863,18 +863,48 @@ header {
   header nav {
     height: 100px;
     padding-top: 10px;
-    margin-left: 3%;
     margin-bottom: 100px; }
+    header nav span {
+      display: none; }
     header nav ul {
-      width: 80%;
-      margin: 0 auto; }
+      max-width: 75rem;
+      margin-right: auto;
+      margin-left: auto; }
+      header nav ul::before, header nav ul::after {
+        display: table;
+        content: ' '; }
+      header nav ul::after {
+        clear: both; }
       header nav ul li {
         display: inline-block;
-        margin-left: 10%;
+        padding-left: 120px;
         padding-top: 10px;
         color: white; }
         header nav ul li a {
           text-transform: uppercase; }
+    @media screen and (max-width: 75em) {
+      header nav span {
+        display: block;
+        margin-bottom: 10px; }
+        header nav span div {
+          width: 35px;
+          height: 5px;
+          background-color: white;
+          margin: 6px 0;
+          margin-left: 20px; }
+      header nav ul {
+        display: none;
+        background: #B23A63;
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 999; }
+        header nav ul li {
+          display: block;
+          margin-bottom: 20px;
+          padding: 20px; }
+          header nav ul li:hover {
+            background: black; } }
   header #logo {
     width: 230px;
     display: block;

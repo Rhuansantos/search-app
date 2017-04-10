@@ -117,40 +117,43 @@ var _core = require('./core');
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var main = function () {
-	function main() {
-		_classCallCheck(this, main);
-	}
+    function main() {
+        _classCallCheck(this, main);
+    }
 
-	_createClass(main, null, [{
-		key: 'searchPet',
-		value: function searchPet() {
-			console.log('ok');
-			var zipCode = document.querySelector('#location').value;
-			// const zipCode = document.querySelector('#location').value;
+    _createClass(main, null, [{
+        key: 'searchPet',
+        value: function searchPet() {
 
-			// search params
-			var params = new FormData();
-			params.append("location", zipCode);
-			params.append("limit", "12");
-			params.append("type", "cat");
+            var zipCode = document.querySelector('#location').value;
 
-			var adopets = new _core.search('https://api.beta.adopets.org/pet/find', "POST", null, params);
-		}
-	}, {
-		key: 'searchMusic',
-		value: function searchMusic() {
-			console.log('ok');
-			var spotify = new _core.search('https://api.spotify.com/v1/search?q=projota&type=artist', "GET");
-		}
-	}]);
+            // search params
+            var params = new FormData();
+            params.append("location", zipCode);
+            params.append("limit", "12");
+            params.append("type", "cat");
 
-	return main;
+            var adopets = new _core.search('https://api.beta.adopets.org/pet/find', "POST", null, params);
+        }
+    }]);
+
+    return main;
 }();
+
+document.getElementById('menuMobile').addEventListener('click', function (event) {
+
+    var menu = document.getElementById('menuList');
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+});
 
 document.getElementById('submitSearch').addEventListener('click', function (event) {
 
-	event.preventDefault();
-	main.searchPet();
+    event.preventDefault();
+    main.searchPet();
 });
 
 },{"./core":1}]},{},[2]);
