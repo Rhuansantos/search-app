@@ -925,6 +925,7 @@ header {
       margin-left: 20px;
       margin-bottom: 20px;
       background: none;
+      font-size: 16px;
       color: white;
       border: solid 1px white; }
     header form input:-webkit-autofill {
